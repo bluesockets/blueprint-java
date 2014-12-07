@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans:beans xmlns="http://www.springframework.org/schema/security"
+			 xmlns:beans="http://www.springframework.org/schema/beans"
+			 xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+			 xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-4.1.xsd
+								http://www.springframework.org/schema/security http://www.springframework.org/schema/security/spring-security-3.2.xsd">
+
+	<global-method-security pre-post-annotations="enabled" secured-annotations="enabled"/>
+
+	<!-- default open security -->
+	<http pattern="/index.sf" 	security="none"/>
+	<http pattern="/css/**"	security="none"/>
+	<http pattern="/js/**" 	security="none"/>
+	<http pattern="/images/**" security="none"/>
+	<http pattern="/errors/**" security="none"/>
+	<http pattern="/public/**" security="none"/>
+
+	<http auto-config="true" access-denied-page="/forbidden.sf">
+
+		<!-- everything else is protected -->
+		<intercept-url pattern="/**" access="ROLE_BASIC" />
+
+		<form-login login-page="/index.sf" always-use-default-target="true" default-target-url="/login.sf" />
+		<logout />
+
+	</http>
+
+	<authentication-manager alias="authenticationManager">
+		<authentication-provider user-service-ref="userDetailsService">
+			<password-encoder hash="md5" />
+		</authentication-provider>
+	</authentication-manager>
+
+</beans:beans>
