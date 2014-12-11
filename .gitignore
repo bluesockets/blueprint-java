@@ -1,4 +1,4 @@
-#java specific
+## java specific
 *.class
 
 ## generic files to ignore
@@ -8,10 +8,12 @@
 *.swp
 *.out
 
-# build artifacs
+## build artifacs
 /build
 /deploy/
 
-# intellij
+## intellij
+blueprint.iml
 .idea
 .gradle
+gradle
