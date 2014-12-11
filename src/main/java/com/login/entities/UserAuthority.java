@@ -7,7 +7,7 @@ import javax.persistence.*;
  */
 
 @Entity
-@Table(name= "tb_user_authorities")
+@Table(name= "tb_user_authority")
 public class UserAuthority {
 
     // == fields == //

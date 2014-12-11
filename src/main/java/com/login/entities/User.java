@@ -42,6 +42,7 @@ public class User implements Serializable {
     protected boolean isActive = true;
 
     @OneToMany
+    @JoinColumn(name="user_id")
     protected Set<UserAuthority> authorities = new HashSet<>();
 
     // == helpers == //
