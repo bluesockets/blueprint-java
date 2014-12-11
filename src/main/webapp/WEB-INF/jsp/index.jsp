@@ -1,3 +1,4 @@
+<%@ include file="/WEB-INF/jsp/includes/taglibs.jsp" %>
 <table style="width:500px;height:360px;background-color:white;border:1px solid black" align="center" cellspacing="0" cellpadding="20" >
 	<tr height="95%">
 		<td valign="top" align="center" class="content">

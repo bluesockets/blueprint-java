@@ -14,7 +14,7 @@ import org.springframework.security.core.context.SecurityContext;
 @Controller
 public class LoginMVC {
 	
-    @RequestMapping("/login.sf")
+    @RequestMapping(value="/login.sf")
     public String defaultUserLogin(HttpServletRequest request) {
     	if(request.getSession().getAttribute("loginAttemps") != null ) {
     		request.getSession().removeAttribute("loginAttemps");
