@@ -1,7 +1,7 @@
 package com.login.service;
 
-import com.login.form.LoginForm;
-import com.login.form.SecureUser;
+import com.login.utils.LoginForm;
+import com.login.utils.SecureUser;
 import com.login.utils.Roles;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.core.GrantedAuthority;

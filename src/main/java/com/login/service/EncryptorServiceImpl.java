@@ -1,15 +1,17 @@
-package com.login.utils;
+package com.login.service;
 
 import java.security.MessageDigest;
 
 import org.apache.commons.logging.Log;
 import org.apache.commons.logging.LogFactory;
+import org.springframework.stereotype.Service;
 
-public class MD5Encrypter {
+@Service(value="md5Encryptor")
+public class EncryptorServiceImpl implements EncrypterService {
 	
-	private static final Log log = LogFactory.getLog(MD5Encrypter.class);
+	private static final Log log = LogFactory.getLog(EncryptorServiceImpl.class);
 
-	public static String encrypt(String password) {
+	public String encrypt(String password) {
 		String hash = "";
 		try {
 			MessageDigest algorithm = MessageDigest.getInstance("MD5");

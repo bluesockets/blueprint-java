@@ -17,7 +17,7 @@ import java.util.Set;
 @NamedQueries({
     @NamedQuery(
         name="user.getUserByUsername",
-        query="SELECT u FROM com.login.entities.User u join u.authorities WHERE u.userName = :username"
+        query="SELECT u FROM com.login.entities.User u join fetch u.authorities WHERE u.userName = :username"
     )
 })
 public class User implements Serializable {
