@@ -1,6 +1,6 @@
 package com.login.service;
 
-import com.login.form.LoginForm;
+import com.login.utils.LoginForm;
 
 public interface LoginService {
 

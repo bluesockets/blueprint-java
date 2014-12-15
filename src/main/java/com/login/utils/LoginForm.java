@@ -1,4 +1,4 @@
-package com.login.form;
+package com.login.utils;
 
 import java.io.Serializable;
 

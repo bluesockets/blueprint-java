@@ -45,7 +45,7 @@
     <!-- view resolvers -->
     <bean id="viewResolver" class="org.springframework.web.servlet.view.InternalResourceViewResolver">
         <property name="viewClass" value="org.springframework.web.servlet.view.JstlView" />
-        <property name="prefix" value="/WEB-INF/jsp/" />
+        <property name="prefix" value="/WEB-INF/views/" />
     </bean>
 
     <!-- Configure the multipart resolver -->
@@ -69,7 +69,7 @@
 
     <!-- Failure Handler -->
     <bean id="authenticationFailureHandler" class="com.login.service.SimpleAuthenticationFailureHandler">
-        <property name="defaultFailureUrl" value="/index.sf" />
+        <property name="defaultFailureUrl" value="/index.bp" />
         <property name="useForward" value="false" />
     </bean>
 

@@ -1,4 +1,4 @@
-<%@ include file="/WEB-INF/jsp/includes/taglibs.jsp" %>
+<%@ include file="/WEB-INF/views/includes/taglibs.jsp" %>
 <table style="width:500px;height:360px;background-color:white;border:1px solid black" align="center" cellspacing="0" cellpadding="20" >
 	<tr height="95%">
 		<td valign="top" align="center" class="content">
@@ -12,7 +12,7 @@
 			</c:forEach>
 			<br/>
 			</spring:hasBindErrors>
-			<c:if test="${not empty loginAttemps}">
+			<c:if test="${not empty loginAttempts}">
 			<li class="errors">Login Error. ${sessionScope["SPRING_SECURITY_LAST_EXCEPTION"].message}</li><br/>
 			</c:if>
 			<c:if test="${not empty resetPasswordMsg}">
@@ -45,8 +45,8 @@
 								<input id="remember-me" type="checkbox" class="css-checkbox med" name="_spring_security_remember_me"/>
 								<label for="remember-me" class="css-label med elegant checkboxText">Remember me on this computer.</label>
 
-								<c:if test="${not empty loginAttemps and loginAttemps >= 3}">
-									<a class="forgotPasswordLink" href="<c:url value='/user/password/request.sf'/>">Forgot your password?</a>
+								<c:if test="${not empty loginAttempts and loginAttempts >= 3}">
+									<a class="forgotPasswordLink" href="<c:url value='/user/password/request.bp'/>">Forgot your password?</a>
 
 								</c:if>
 

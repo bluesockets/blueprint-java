@@ -2,7 +2,7 @@ package com.login.web;
 
 import javax.servlet.http.HttpSession;
 
-import com.login.form.LoginForm;
+import com.login.utils.LoginForm;
 import org.apache.commons.logging.Log;
 import org.apache.commons.logging.LogFactory;
 import org.springframework.stereotype.Controller;
@@ -16,10 +16,10 @@ public class Index {
 	
 	private static final Log log = LogFactory.getLog(Index.class);
 	
-	protected static final String INDEX = "/ISS/index.sf";
+	protected static final String INDEX = "/ISS/index.bp";
 	protected static final String INDEX_JSP = "/index.jsp";
 	
-	@RequestMapping(value = "/index.sf")
+	@RequestMapping(value = "/index.bp")
 	public ModelAndView index(
 		LoginForm loginForm,
 		ModelAndView mav,
@@ -34,7 +34,7 @@ public class Index {
 		return modelAndView;
 	}
 
-	@RequestMapping(value = "/logout.sf", method=RequestMethod.GET)
+	@RequestMapping(value = "/logout.bp", method=RequestMethod.GET)
 	public ModelAndView logout(HttpSession session) {
 		session.invalidate();
 		ModelAndView mav = new ModelAndView("redirect:"+INDEX);
