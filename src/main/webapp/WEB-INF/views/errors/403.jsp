@@ -1,4 +1,4 @@
-<%@ include file="/WEB-INF/jsp/includes/taglibs.jsp" %>
+<%@ include file="/WEB-INF/views/includes/taglibs.jsp" %>
 <html>
 <head>
 <link type="text/css" rel="stylesheet" href="http://fonts.googleapis.com/css?family=PT+Sans" />

@@ -1,7 +1,8 @@
-package com.login.form;
+package com.login.utils;
 
 import java.util.Collection;
 
+import com.login.utils.LoginForm;
 import org.springframework.security.core.GrantedAuthority;
 import org.springframework.security.core.userdetails.User;
 

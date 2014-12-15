@@ -8,19 +8,19 @@
 	<global-method-security pre-post-annotations="enabled" secured-annotations="enabled"/>
 
 	<!-- default open security -->
-	<http pattern="/index.sf" 	security="none"/>
+	<http pattern="/index.bp" 	security="none"/>
 	<http pattern="/css/**"		security="none"/>
 	<http pattern="/js/**" 		security="none"/>
 	<http pattern="/images/**" 	security="none"/>
 	<http pattern="/errors/**" 	security="none"/>
 	<http pattern="/public/**" 	security="none"/>
 
-	<http auto-config="true" access-denied-page="/forbidden.sf">
+	<http auto-config="true" access-denied-page="/forbidden.bp">
 
 		<!-- everything else is protected -->
 		<intercept-url pattern="/**" access="ROLE_BASIC" />
 
-		<form-login login-page="/index.sf" always-use-default-target="true" default-target-url="/login.sf" />
+		<form-login login-page="/index.bp" always-use-default-target="true" default-target-url="/login.bp" />
 		<logout />
 
 	</http>
