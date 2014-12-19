@@ -12,32 +12,32 @@ import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.servlet.ModelAndView;
 
 @Controller
-public class Index {
+public class IndexMVC {
 	
-	private static final Log log = LogFactory.getLog(Index.class);
+	private static final Log log = LogFactory.getLog(IndexMVC.class);
 	
-	protected static final String INDEX = "/ISS/index.bp";
-	protected static final String INDEX_JSP = "/index.jsp";
+	protected static final String INDEX_VIEW = "/index.bp";
+	protected static final String LOGOUT_VIEW = "/logout.bp";
+	protected static final String INDEX_JSP = "/user/index.jsp";
 	
-	@RequestMapping(value = "/index.bp")
+	@RequestMapping(value = INDEX_VIEW)
 	public ModelAndView index(
 		LoginForm loginForm,
-		ModelAndView mav,
 		Model model
 	) {
 		log.info("forwarding to index.jsp");
 		ModelAndView modelAndView = new ModelAndView(INDEX_JSP, "loginForm", loginForm);
 		String resetPasswordMsg = (String) model.asMap().get("resetPasswordMsg");
 		if (resetPasswordMsg != null && ! resetPasswordMsg.isEmpty()) {
-			mav.addObject("resetPasswordMsg", model.asMap().get("resetPasswordMsg"));
+			modelAndView.addObject("resetPasswordMsg", model.asMap().get("resetPasswordMsg"));
 		}
 		return modelAndView;
 	}
 
-	@RequestMapping(value = "/logout.bp", method=RequestMethod.GET)
+	@RequestMapping(value = LOGOUT_VIEW, method=RequestMethod.GET)
 	public ModelAndView logout(HttpSession session) {
 		session.invalidate();
-		ModelAndView mav = new ModelAndView("redirect:"+INDEX);
+		ModelAndView mav = new ModelAndView("redirect:"+ INDEX_VIEW);
 		return mav;
 	}
 }
