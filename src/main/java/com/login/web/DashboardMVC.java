@@ -12,9 +12,9 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.security.core.context.SecurityContext;
 
 @Controller
-public class Login {
+public class DashboardMVC {
 	
-    @RequestMapping(value="/login.bp")
+    @RequestMapping(value="/dashboard.bp")
     public String defaultUserLogin(HttpServletRequest request) {
     	if(request.getSession().getAttribute("loginAttempts") != null ) {
     		request.getSession().removeAttribute("loginAttempts");
@@ -26,7 +26,7 @@ public class Login {
 				return "redirect:/administration/dashboard.bp";
 			} 
 		}		
-        return "redirect:/index.bp";
+        return "redirect:/user/dashboard.bp";
     }
    
 }
