@@ -18,7 +18,7 @@ public class IndexMVC {
 	
 	protected static final String INDEX_VIEW = "/index.bp";
 	protected static final String LOGOUT_VIEW = "/logout.bp";
-	protected static final String INDEX_JSP = "/user/index.jsp";
+	protected static final String INDEX_JSP = "/index.jsp";
 	
 	@RequestMapping(value = INDEX_VIEW)
 	public ModelAndView index(

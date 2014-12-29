@@ -15,6 +15,7 @@
 	<http pattern="/js/**" 			security="none"/>
 	<http pattern="/images/**" 		security="none"/>
 	<http pattern="/errors/**" 		security="none"/>
+	<http pattern="/signup/**" 		security="none"/>
 	<http pattern="/public/**" 		security="none"/>
 
 	<http auto-config="true" access-denied-page="/forbidden.bp">

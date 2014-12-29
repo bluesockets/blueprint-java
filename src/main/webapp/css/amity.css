@@ -1,0 +1,247 @@
+html.amity, body.amity {
+    height: 100%;
+}
+body.amity {
+    min-height: 100%;
+}
+p.amity {
+    text-indent: 50px;
+}
+hr.amity {
+    border-top: 1px solid #eee;
+}
+
+.success {
+    font-size:14px;
+    color:green;
+    font-weight: bold;
+    float:right;
+    padding-top: 5px;
+}
+.error {
+    font-size:14px;
+    color:red;
+    font-weight: bold;
+    float:right;
+    padding-top: 5px;
+}
+
+/* editable content*/
+.amity-editable {
+    margin: 0px;
+    width: 90%;
+}
+.amity-selected {
+    background:white;
+}
+.amity-preview [contenteditable="true"] {
+    padding: 0px;
+    outline: 2px dashed #CCC;
+}
+.amity-preview [contenteditable="true"]:hover {
+    outline: 2px dashed #0090D2;
+    background: rgba(255, 255, 153, 1);
+}
+
+/* global */
+.amity-canvas {
+    background-color: whitesmoke;
+    border-radius: 6px;
+    padding: 10px 10px 20px 10px;
+    height: 100%;
+}
+.dropdown-inverse {
+    background-color: rgb(221, 240, 234);
+}
+
+/* navbar related */
+#amity-headerContent {
+    padding: 25px 25px 0px 25px;
+    width:100%;
+}
+.amity-content {
+    padding:0px 26px 26px 26px;
+    height: 100%;
+}
+.amity-headerRow {
+    height:20px;
+}
+.navbar-nav>li>.dropdown-menu {
+    margin-top:2px;
+}
+.amity-communicationBack{
+    width:180px;
+    text-align: left;
+}
+.amity-communicationForward {
+    width:180px;
+    text-align: right;
+}
+
+/* contact styles */
+.amity-contactContainer {
+    width: 646px;
+}
+.amity-contactContainer:hover {
+    background-color: white;
+}
+.amity-contactSelectedColumn {
+    float:right;
+    display:none;
+    padding-top: 5px;
+    padding-right: 10px;
+    font-size: 14px;
+    position:relative;
+    z-index: 10;
+}
+.amity-contactSelectedColumn:hover {
+    display:block;
+}
+.amity-contactFieldLabel {
+    margin: 0px;
+    line-height: 10px;
+    font-size:16px;
+}
+.amity-contactIndexColumn {
+    float:left;
+    padding:2px 0px 2px 0px;
+    width:50px;
+}
+.amity-contactFieldColumn {
+    float:left;
+    padding:2px 0px 2px 0px;
+    width:130px;
+    margin:0px;
+}
+.amity-contactEmailColumn {
+    float:left;
+    padding:2px 0px 2px 0px;
+    margin:0px;
+}
+#amity-editContactContainer {
+    width:100%;
+}
+.amity-clear {
+    clear:both;
+}
+.amity-middleColumnBuffer {
+    width:30px
+}
+#amity-contactListContainer {
+    padding-left: 10px;
+    width: 660px;
+    height:400px;
+    overflow-y: auto;
+    margin:auto;
+}
+.amity-contactSearchField {
+    padding-bottom: 10px;
+}
+.amity-contactFirstNameField {
+    width:320px !important;
+}
+.amity-contactLastNameField {
+    width:360px !important;
+}
+.amity-contactFormColumn {
+    float:left;
+    padding:2px 0px 2px 0px;
+}
+.amity-contactFormEmailColumn {
+    width:560px;
+    float: left;
+}
+.amity-contactFormSubmitColumn {
+    float: left;
+}
+.amity-contactFormMedium {
+    text-align: left;
+    width:700px;
+}
+.amity-contactFormHistory {
+    text-align: left;
+    width:700px;
+}
+
+/* medium */
+.amity-mediumEngagement {
+    text-align: left;
+    width:700px;
+    padding-left:10px;
+}
+.amity-mediumEngagementSubmit {
+    text-align: left;
+    padding-top: 4px;
+}
+
+/* communication */
+.amity-communicationContainer {
+    margin:5px;
+    border: 1px dotted grey;
+}
+.amity-communicationContainer:hover {
+    background-color:white;
+}
+.amity-communicationFieldColumnSelector {
+    margin: 0px;
+    padding: 4px 40px 4px 4px !important;
+    text-align: right;
+    visibility:hidden;
+}
+.amity-communicationIndexColumn {
+    float:left;
+    padding:2px 0px 2px 0px;
+    width:50px;
+    height: 50px;
+}
+.amity-communicationNameColumn {
+    float:left;
+    padding:2px 0px 2px 0px;
+    margin:0px;
+    width: 300px;
+}
+.amity-communicationDescriptionColumn {
+    float:left;
+    padding:2px 0px 2px 0px;
+    margin:0px;
+    width: 300px;
+    font-size:14px;
+}
+.communicationDateColumn {
+    float:right;
+    font-size: 16px;
+    padding-top: 4px;
+}
+.amity-communicationMediumsColumn,
+.amity-communicationLanguageColumn {
+    float: left;
+    padding-left: 50px;
+    font-size:12px;
+    width:300px;
+}
+.amity-communicationPreviewColumn {
+    float:left;
+    height:1400px;
+    width:100%
+}
+
+
+/* content factory*/
+.amity-contentContainer {
+    width:1000px;
+}
+.amity-contentNameField {
+    width:520px;
+}
+.amity-contentActiveSwitch {
+
+}
+.amity-contentSaveField{
+    width:200px;
+}
+.amity-contentPreview {
+    background-color:white;
+    width:100%;
+    padding:30px;
+    border-radius: 6px;
+}

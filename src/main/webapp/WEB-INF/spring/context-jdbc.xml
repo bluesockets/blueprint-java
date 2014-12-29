@@ -20,7 +20,7 @@
 		</property>
 		<property name="packagesToScan">
 			<list>
-				<value>com.login.entities</value>
+				<value>com.model</value>
 			</list>
 		</property>
 		<property name="hibernateProperties">
