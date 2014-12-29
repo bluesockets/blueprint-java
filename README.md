@@ -8,6 +8,7 @@ The stack currently consists of:
 * Hikari CP 2.2.5
 * Spring Core, MVC, ORM etc 4.1.2
 * Spring Security 3.2.5
+* bag.js and basket.js for local storage cacheing
 * Web.xml 3.0
 * Gradle build
 
