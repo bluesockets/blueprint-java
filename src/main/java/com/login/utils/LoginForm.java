@@ -4,7 +4,7 @@ import java.io.Serializable;
 
 import java.util.Set;
 
-import com.login.entities.UserAuthority;
+import com.model.UserAuthority;
 import org.hibernate.validator.constraints.NotEmpty;
 
 public class LoginForm implements Serializable {
@@ -13,11 +13,13 @@ public class LoginForm implements Serializable {
 	
 	// == fields == //
 
+	protected Integer userId;
+
 	@NotEmpty(message="Username is required")
 	protected String username;
 	
 	@NotEmpty(message="Password is required")
-	protected String password;
+	protected transient String password;
 
 	protected Set<UserAuthority> authorities;
 
@@ -37,6 +39,12 @@ public class LoginForm implements Serializable {
 
 	// == methods == //
 
+	public Integer getUserId() {
+		return userId;
+	}
+	public void setUserId(Integer userId) {
+		this.userId = userId;
+	}
 	public String getUsername() {
 		return username;
 	}

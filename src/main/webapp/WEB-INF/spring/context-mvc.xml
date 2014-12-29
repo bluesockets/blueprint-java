@@ -14,6 +14,7 @@
 
     <!-- annotation configuration -->
     <context:component-scan base-package="com.login" />
+    <context:component-scan base-package="com.signup" />
 
     <!-- enable annotations -->
     <mvc:annotation-driven />

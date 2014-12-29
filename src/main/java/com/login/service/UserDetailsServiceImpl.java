@@ -29,7 +29,7 @@ public class UserDetailsServiceImpl implements UserDetailsService {
 		authorities.add(new SimpleGrantedAuthority(Roles.ROLE_BASIC));
 
 		authorities.addAll(form.getAuthorities().stream().map(
-			authority -> new SimpleGrantedAuthority(authority.getRole())
+			authority -> new SimpleGrantedAuthority(authority.getAuthority())
 		).collect(Collectors.toList()));
 
 		boolean enabled = true;

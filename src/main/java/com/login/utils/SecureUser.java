@@ -1,14 +1,15 @@
 package com.login.utils;
 
+import java.io.Serializable;
 import java.util.Collection;
 
 import com.login.utils.LoginForm;
 import org.springframework.security.core.GrantedAuthority;
 import org.springframework.security.core.userdetails.User;
 
-public class SecureUser extends User {
+public class SecureUser extends User implements Serializable {
 
-	private static final long serialVersionUID = 7289105534152948655L;
+	private static final long serialVersionUID = 1L;
 
 	private LoginForm userForm;
 	

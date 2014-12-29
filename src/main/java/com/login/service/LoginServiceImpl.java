@@ -1,8 +1,8 @@
 package com.login.service;
 
-import com.login.dao.UserDAO;
-import com.login.entities.User;
 import com.login.utils.LoginForm;
+import com.model.User;
+import com.signup.dao.UserDAO;
 import org.apache.commons.logging.Log;
 import org.apache.commons.logging.LogFactory;
 import org.springframework.beans.factory.annotation.Autowired;
